@@ -1,0 +1,150 @@
+body {
+  /* background-color: #b9dbe7; */
+  background-color: #484848;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  font-size: small;
+  font-style: italic;
+  float: right;
+  text-align: center;
+}
+.modal {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 70%;
+  background-color: #f0ffff;
+  padding: 3rem;
+  padding-bottom: 1rem;
+  border-radius: 25px;
+  z-index: 11;
+  font-size: medium;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+}
+.modal-Footer {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 7;
+}
+.open-Modal {
+  cursor: pointer;
+  border: none;
+  background: none;
+  float: right;
+}
+.closeModal {
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  background: none;
+  float: right;
+  font-size: 4rem;
+  top: 0rem;
+  right: 1rem;
+}
+.box {
+  border-radius: 25px;
+  padding: 25px;
+  width: 90%;
+  background-color: #f0ffff;
+  margin: auto;
+  border-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.button {
+  border-radius: 25px;
+  margin: auto;
+  width: 50%;
+  height: 50px;
+  display: flex;
+  border-style: solid;
+  background-color: #e69340;
+  justify-content: center;
+  transition: 0.4s;
+  opacity: 0.8;
+  cursor: pointer;
+  font-size: x-large;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-family: 'MyWebFont', Arial, sans-serif;
+}
+.button:hover {
+  opacity: 1;
+}
+h1 {
+  text-align: center;
+  padding: 0%;
+  margin: 0%;
+  font-family: 'MyWebFont', Arial, sans-serif;
+}
+
+.p {
+  font-size: medium;
+  font-family: 'MyWebFont', Arial, sans-serif;
+  text-align: left;
+}
+.headings {
+  /* font-size: large;
+  font-weight: bold; */
+  font-family: 'MyWebFont', Arial, sans-serif;
+}
+input {
+  font-size: medium;
+}
+.checkboxes {
+  transform: scale(1.5);
+}
+select {
+  font-size: medium;
+  font-family: 'MyWebFont', Arial, sans-serif;
+}
+.results {
+  white-space: pre-wrap;
+  border-radius: 25px;
+  padding: 25px;
+  width: 90%;
+  align-self: center;
+  background-color: azure;
+  margin: auto;
+  font-family: 'MyWebFont', Arial, sans-serif;
+}
+.note {
+  font-style: italic;
+  font-size: small;
+  font-weight: normal;
+}
+.hidden {
+  display: none;
+}
+
+.loading {
+  border: 16px solid azure;
+  border-radius: 50%;
+  border-top: 16px solid rgb(207, 255, 255);
+  width: 92px;
+  height: 92px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

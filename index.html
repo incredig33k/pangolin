@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pangolin Whisper Web Interface</title>
+    <link rel="icon" type="images/x-icon" href="./favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+  </head>
+
+
+  <body>
+    <div class="modal hidden">
+      <button class="closeModal">&times;</button>
+      <h1>About the Pangolin Simple Web Interface</h1>
+      <p style="font-size: medium;">
+        Pangolin is an super simple open source web interface for OpanAI's Whisper automatic speech
+        recognition (ASR) system. <a href="https://openai.com/research/whisper">OpenAI Whisper</a>.  This web interface is designed to be simple and easy to use. All the
+        source code is available on the <a href="https://incredigeek.com/home/pangolin">Website</a> and on GitHub.
+        <br />
+        <br />
+        Have a large amount of audio you need assistance transcribing?  <a href="https://incredigeek.com/home/contact-us">Contact us.</a>
+        <br />
+  
+        <br />
+  
+        <br />
+        <div class="modal-Footer">
+          <img src="logo.png" width="128" />
+          <br />
+          Created by Incredigeek.
+        </div>
+        
+      </p>
+    </div>
+    <div class="box">
+      <div class="about">
+        <a><button class="about open-Modal">About</button></a>
+      </div>
+
+      <h1>
+        <img src="./logo.png" width="128" />
+        <br />Pangolin Whisper Web Interface
+      </h1>
+      <br />
+      <p>Pangolin is a simple web interface for OpenAI's Whisper.</p>
+
+      <br />
+      <div class="headings">
+        <form action="fileupload" method="post" enctype="multipart/form-data">
+          1. Select Audio File: <input type="file" name="filetoupload" /><br />
+
+          <br />
+          <br />
+
+          2. Select Model:
+          <select name="modeltouse" id="modeltouse">
+            <option value="medium.en">medium.en</option>
+            <option value="tiny">tiny</option>
+            <option value="tiny.en">tiny.en</option>
+            <option value="base">base</option>
+            <option value="base.en">base.en</option>
+            <option value="small">small</option>
+            <option value="small.en">small.en</option>
+            <option value="medium">medium</option>
+            <option value="medium.en">medium.en</option>
+            <option value="large-v1">large-v1</option>
+            <option value="large-v2">large-v2</option>
+          </select>
+          <p class="note">
+            Large-v2 and medium.en seem to produce the most accurate results.
+          </p>
+          <br />
+
+          3. Timestamps?
+          <input class="checkboxes" type="checkbox" name="timestamps" />
+          <br />
+          <br />
+          <br />
+          <input class="button" type="submit" value="Transcribe!" />
+        </form>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- <div class="results" onload="stop()"></div> -->
+    <script src="./script.js"></script>
+    <!-- <div class="loading"></div> -->
+  </body>
+</html>
