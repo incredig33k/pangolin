@@ -57,7 +57,6 @@ https
       if (err) throw err
       if (req.url == '/fileupload') {
         res.write(html)
-        res.write(`<div class="loading results"></div>`)
         var form = new formidable.IncomingForm()
         form.parse(req, function (err, fields, files) {
           console.log('Fields ' + fields.modeltouse)
@@ -71,8 +70,14 @@ https
           fs.rename(oldpath, newpath, function (err) {
             if (err) {
               console.log('No file selected!')
-              res.write(`<div class="results">No file selected</div>`)
+              res.write(
+                `<div class="results">No file selected!  Select an audio file and try again.  Redirecting to main page.</div>`
+              )
+              res.write(
+                `<script>setTimeout( function () { window.location.href = "/"}, 3000)</script>`
+              )
             } else {
+              res.write(`<div class="loading results"></div>`)
               console.log(newpath)
               if (fields.timestamps) {
                 var output = execSync(
@@ -103,4 +108,5 @@ https
       }
     })
   })
-  .listen(443)
+  .listen(8443)
+
