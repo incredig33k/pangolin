@@ -57,6 +57,7 @@ https
       if (err) throw err
       if (req.url == '/fileupload') {
         res.write(html)
+        if (!err) res.write(`<div class="loading results"></div>`)
         var form = new formidable.IncomingForm()
         form.parse(req, function (err, fields, files) {
           console.log('Fields ' + fields.modeltouse)
@@ -77,7 +78,6 @@ https
                 `<script>setTimeout( function () { window.location.href = "/"}, 3000)</script>`
               )
             } else {
-              res.write(`<div class="loading results"></div>`)
               console.log(newpath)
               if (fields.timestamps) {
                 var output = execSync(
@@ -109,4 +109,3 @@ https
     })
   })
   .listen(8443)
-
