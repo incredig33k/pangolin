@@ -1,5 +1,5 @@
 <p align=center><img src='./favicon.ico' width=128px></p>
-Pangolin is an super simple open source web interface for OpanAI's Whisper automatic speech recognition (ASR) system. <a href="https://openai.com/research/whisper">OpenAI Whisper</a>. This web interface is designed to be simple and easy to use.  
+Pangolin is an super simple open source web interface for OpanAI's Whisper automatic speech recognition (ASR) system. <a href="https://openai.com/research/whisper">OpenAI Whisper</a>. This web interface is designed to be simple and easy to use.  Info is also available on the <a href="https://www.incredigeek.com/home/pangolin">Website</a>
 <br>
 <br>
 
