@@ -99,6 +99,8 @@ h1 {
   text-align: left;
 }
 .headings {
+  font-size: large;
+  /* font-weight: bold; */
   font-family: 'MyWebFont', Arial, sans-serif;
 }
 input {
@@ -147,3 +149,4 @@ select {
     transform: rotate(360deg);
   }
 }
+
