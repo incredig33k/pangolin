@@ -1,8 +1,10 @@
 body {
   /* background-color: #b9dbe7; */
   background-color: #484848;
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .about {
@@ -14,7 +16,6 @@ body {
 .modal {
   position: absolute;
   top: 10%;
-  left: 10%;
   width: 70%;
   background-color: #f0ffff;
   padding: 3rem;
@@ -60,7 +61,7 @@ body {
   padding: 25px;
   width: 90%;
   background-color: #f0ffff;
-  margin: auto;
+  margin: auto auto;
   border-bottom: 25px;
   margin-bottom: 25px;
 }
@@ -98,8 +99,6 @@ h1 {
   text-align: left;
 }
 .headings {
-  /* font-size: large;
-  font-weight: bold; */
   font-family: 'MyWebFont', Arial, sans-serif;
 }
 input {
